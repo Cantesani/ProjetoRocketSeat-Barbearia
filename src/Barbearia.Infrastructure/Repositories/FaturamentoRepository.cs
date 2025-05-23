@@ -50,5 +50,20 @@ namespace Barbearia.Infrastructure.Repositories
             return true;
         }
 
+        public async Task<List<Faturamento>> GetByMes(DateOnly mes)
+        {
+            var dataInicial = new DateTime(year: mes.Year, month: mes.Month, day: 1).Date;
+            var diasMes = DateTime.DaysInMonth(year: mes.Year, month: mes.Month);
+            var dataFinal = new DateTime(year: mes.Year, month: mes.Month, day: diasMes, hour: 23, minute: 59, second: 59);
+
+            return await _dbContext.faturamento.AsNoTracking()
+                                         .Where(x=>x.Data >= dataInicial &&
+                                                   x.Data <= dataFinal)
+                                         .OrderBy(x=>x.Data)
+                                         .ThenBy(x=>x.Titulo)
+                                         .ToListAsync();
+
+        }
+
     }
 }

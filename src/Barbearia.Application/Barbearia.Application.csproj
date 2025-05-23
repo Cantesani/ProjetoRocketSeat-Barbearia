@@ -7,14 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="UseCases\Faturamento\Relatorios\Pdf\Fonts\BebasNeue-Regular.ttf" />
+    <None Remove="UseCases\Faturamento\Relatorios\Pdf\Fonts\Roboto-Medium.ttf" />
+    <None Remove="UseCases\Faturamento\Relatorios\Pdf\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UseCases\Faturamento\Relatorios\Pdf\Fonts\BebasNeue-Regular.ttf" />
+    <EmbeddedResource Include="UseCases\Faturamento\Relatorios\Pdf\Fonts\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="UseCases\Faturamento\Relatorios\Pdf\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="PDFsharp-MigraDoc" Version="6.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Barbearia.Communication\Barbearia.Communication.csproj" />
     <ProjectReference Include="..\Barbearia.Domain\Barbearia.Domain.csproj" />
     <ProjectReference Include="..\Barbearia.Exception\Barbearia.Exception.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\logo_barbearia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UseCases\Faturamento\Relatorios\Pdf\Images\logo_barbearia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

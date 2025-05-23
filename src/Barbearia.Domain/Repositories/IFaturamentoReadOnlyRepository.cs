@@ -6,5 +6,6 @@ namespace Barbearia.Domain.Repositories
     {
         public Task<List<Faturamento>> GetAll();
         public Task<Faturamento?> GetById(long Id);
+        public Task<List<Faturamento>> GetByMes(DateOnly mes);
     }
 }

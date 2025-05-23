@@ -3,6 +3,8 @@ using Barbearia.Application.UseCases.Faturamento.Create;
 using Barbearia.Application.UseCases.Faturamento.Delete;
 using Barbearia.Application.UseCases.Faturamento.GetAll;
 using Barbearia.Application.UseCases.Faturamento.GetById;
+using Barbearia.Application.UseCases.Faturamento.Relatorios.Excel;
+using Barbearia.Application.UseCases.Faturamento.Relatorios.Pdf;
 using Barbearia.Application.UseCases.Faturamento.Update;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -28,8 +30,8 @@ namespace Barbearia.Application
             services.AddScoped<IGetByIdFaturamentoUseCase, GetByIdFaturamentoUseCase>();
             services.AddScoped<IUpdateFaturamentoUseCase, UpdateFaturamentoUseCase>();
             services.AddScoped<IDeleteFaturamentoUseCase, DeleteFaturamentoUseCase>();
+            services.AddScoped<IGerarExcelUseCase, GerarExcelUseCase>();
+            services.AddScoped<IGerarPdfUseCase, GerarPdfUseCase>();
         }
-
-
     }
 }
