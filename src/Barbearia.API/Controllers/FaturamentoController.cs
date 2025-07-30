@@ -5,12 +5,14 @@ using Barbearia.Application.UseCases.Faturamento.GetById;
 using Barbearia.Application.UseCases.Faturamento.Update;
 using Barbearia.Communication.Request;
 using Barbearia.Communication.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Barbearia.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FaturamentoController : ControllerBase
     {
         [HttpPost]

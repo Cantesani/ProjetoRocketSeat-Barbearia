@@ -132,4 +132,22 @@
   <data name="VALOR_PRECISA_SER_MAIOR_QUE_ZERO" xml:space="preserve">
     <value>O valor precisa ser maior que zero.</value>
   </data>
+  <data name="NOME_USUARIO_OBRIGATORIO" xml:space="preserve">
+    <value>O email é inválido.</value>
+  </data>
+  <data name="EMAIL_USUARIO_OBRIGATORIO" xml:space="preserve">
+    <value>O email é obrigatório.</value>
+  </data>
+  <data name="EMAIL_USUARIO_INVALIDO" xml:space="preserve">
+    <value>O email digitado é inválido.</value>
+  </data>
+  <data name="SENHA_USUARIO_INVALIDO" xml:space="preserve">
+    <value>Sua senha deve ter no mínimo 8 caracteres, contendo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial (exemplo: !, ?, @, *)</value>
+  </data>
+  <data name="EMAIL_JA_EXISTE" xml:space="preserve">
+    <value>O email já existe.</value>
+  </data>
+  <data name="EMAIL_OU_SENHA_INVALIDOS" xml:space="preserve">
+    <value>Email e/ou senha inválidos.</value>
+  </data>
 </root>

@@ -1,13 +1,14 @@
-﻿using Barbearia.Application.UseCases.Faturamento.Relatorios.Excel;
+﻿using System.Net.Mime;
+using Barbearia.Application.UseCases.Faturamento.Relatorios.Excel;
 using Barbearia.Application.UseCases.Faturamento.Relatorios.Pdf;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Mime;
 
 namespace Barbearia.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class RelatoriosController : ControllerBase
     {
         [HttpGet("Excel")]

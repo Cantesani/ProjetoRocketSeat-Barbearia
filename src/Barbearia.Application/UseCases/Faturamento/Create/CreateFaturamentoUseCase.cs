@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Barbearia.Communication.Request;
 using Barbearia.Communication.Response;
-using Barbearia.Domain.Entities;
-using Barbearia.Domain.Enums;
 using Barbearia.Domain.Repositories;
 using Barbearia.Exception.ExceptionBase;
 
@@ -10,7 +8,6 @@ namespace Barbearia.Application.UseCases.Faturamento.Create
 {
     public class CreateFaturamentoUseCase : ICreateFaturamentoUseCase
     {
-
         private readonly IFaturamentoWriteOnlyRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _imapper;

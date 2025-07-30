@@ -10,5 +10,6 @@ namespace Barbearia.Infrastructure.DataAccess
         }
 
         public DbSet<Faturamento> faturamento { get; set; }
+        public DbSet<Usuario> usuario { get; set; } 
     }
 }
